@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    	function test1(){
+    		alert("绑定DOM1");
+    	}
+
+    	function test2(){
+    		alert("绑定DOM2");
+    	}
+    </script>
+</head>
+<body>
+	<a href="http://www.baidu.com" target="_blank" onclick="return false"> 百度</a>
+	<input type="text" name="a" onclick="test1()" />
+	<button id="b">测试</button>
+
+	<script type="text/javascript">
+		document.getElementById("b").onclick=test2;
+	</script>
+</body>
+</html>
