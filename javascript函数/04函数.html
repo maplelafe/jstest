@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testjs</title>
+    <script>
+    	//js万物届时对象
+    	// 一.函数声明
+    	    	// f2("匿名函数"); Uncaught TypeError: f2 is not a function
+    	// 命名函数
+    	function f1(argument) {
+    		document.write(argument);
+    	}
+    	// 匿名函数
+    	var f2=function (argument) {
+    		document.write(argument);
+    	}
+
+    	f1("命名函数");
+    	f2("匿名函数");
+
+    	//使用Function方法构造匿名函数
+    	var f3=new Function('name','age',"alert('name:'+name+'age:'+age);");
+    	f3("aaa","bbb");
+
+    	//f3是windows的属性
+    	window.f3("aaa","bbb");
+
+
+    	// 二.函数返回值
+    		// 1.局部变量，全局变量，当全局变量和局部变量一样时，局部覆盖全局
+    		// 2.局部函数
+    			//1) 调用局部函数
+    		function f4(){
+    			var name="1111";
+    			function f5(){
+    				alert("f5-->"+name);
+    			}
+    			f5();
+
+    		}
+    		f4();
+    		 // 2) 调用局部函数
+    		function f6(){
+    			var name="2222";
+    			function f7(){
+    				alert("f7-->"+name);
+    			}
+    			return f7;
+    		}
+    		var temp=f6();    		
+    		temp();
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
