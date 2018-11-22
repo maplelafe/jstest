@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象</title>
+    <script>
+    	// Date
+        var d=new Date();
+        document.write(d.toString());
+        var year = d.getFullYear();
+        var month = d.getMonth()+1;
+        var date = d.getDate();
+        var days = d.getDay();
+        switch(days){
+        	case 0:days="星期天";break;
+        	case 1:days="星期一";break;
+        	case 2:days="星期二";break;
+        	case 3:days="星期三";break;
+        	case 4:days="星期四";break;
+        	case 5:days="星期五";break;
+        	case 6:days="星期六";break;
+        	default:days="error";        };
+            document.write("<br/>"+year+":"+month+":"+date+","+days);
+
+		var mydate=new Date();
+		var myddy=mydate.getDay();//获取存储当前日期
+		var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+		document.write("<br/>"+"今天是：" + weekday[myddy]);
+
+		// Math
+		document.write(Math.round(3.4));
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

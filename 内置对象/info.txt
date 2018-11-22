@@ -1,0 +1,6 @@
+js对象 Date，Math，Number，String，RegExp
+browser对象；window，navigator，screen,history,location
+	Window 对象表示浏览器中打开的窗口,window(alert(),comfirm(),close()........)
+
+
+html对象：<input></input>  .....

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    var count=10;
+	function open_win(){
+		window.open("http://www.baidu.com","baidu",'width=500,height=300,menubar=no');
+	}
+	function showTime(){
+
+		var d = new Date();
+		var h=d.getHours();
+		var m=d.getMinutes();
+		var s=d.getSeconds();
+		document.getElementById("clock").innerHTML=h+":"+m+":"+s;
+		count--;
+		if(count<=0){
+				window.clearInterval(t);
+		}
+	}
+	var t=window.setInterval("showTime()",1000);
+    </script>
+</head>
+<body>
+
+<form>
+	<input type="button" onclick="open_win()" value="打开" />
+<input type="button" onclick="t=window.clearInterval(t)" value="关闭"></button>
+</form>
+
+<div type="text" id="clock"/>
+</body>
+</html>
