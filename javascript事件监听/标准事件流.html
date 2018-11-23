@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试冒泡IEChrome支持</title>
+    <script>
+        function show(text) {
+            var dis=document.getElementById("display");
+            dis.innerHTML+=text;
+        }
+
+        // 标准DOM冒泡型事件流,捕获型事件流
+    </script>
+</head>
+<body onclick="show('body<br/>')">
+<div onclick="show('div<br/>')"><p onclick="show('p<br/>')">click me</p></div>
+<div id="display"></div>
+
+</body>
+</html>
